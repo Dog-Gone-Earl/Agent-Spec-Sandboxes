@@ -1,0 +1,15 @@
+logs:
+  - type: file
+    path: /etc/datadog-agent/python_logs/data.log
+    service: python_app
+    source: python
+    log_processing_rules:
+    - type: exclude_at_match
+      name: exclude_mi6
+      ## Regexp can be anything
+      pattern: (MI6)
+    - type: mask_sequences
+      name: price_hide
+      replace_placeholder: "$1 $2 $3 $4 $5 masked_price"
+      ##One pattern that contains capture groups
+      pattern: ('Company':)\s('Logans Logistics').*('Item':)\s('Van', |'SUV', |'Truck', )('Price':)\s(\d{5})

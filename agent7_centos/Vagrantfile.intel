@@ -1,0 +1,9 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "centos/7"
+  config.vm.synced_folder "./shared", "/home/vagrant/shared", create: true
+  #config.vm.provision "shell", privileged: true, inline: <<-SHELL
+  #SHELL
+  config.vm.provision :file, source: './data', destination: '~/data'
+  config.vm.provision :file, source: '~/.sandbox.conf.sh', destination: '~/.sandbox.conf.sh'
+  config.vm.provision "shell", path: "./setup.sh", privileged: false
+end
