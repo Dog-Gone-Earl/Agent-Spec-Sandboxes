@@ -1,7 +1,7 @@
 # Lighthouse Integration `CentOS`
 
 - <link>https://docs.datadoghq.com/agent/guide/integration-management/?tab=linux#install</link>
-- <link>https://docs.datadoghq.com/integrations/lighthouse/#validation</link>
+- <link>https://docs.datadoghq.com/integrations/lighthouse/</link>
 
 ## Start sandbox
 <pre>
@@ -37,5 +37,3 @@ instances:
 `sudo service datadog-agent restart`
 
 ## Lighthouse Metrics Should Begin to Collect
-
-`sudo datadog-agent check lighthouse -l debug -r --table`
