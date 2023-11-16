@@ -1,6 +1,13 @@
-# Lighthouse Integration
+# Lighthouse Integration `CentOS`
 
-<link>https://docs.datadoghq.com/integrations/lighthouse/#validation</link>
+- <link>https://docs.datadoghq.com/agent/guide/integration-management/?tab=linux#install</link>
+- <link>https://docs.datadoghq.com/integrations/lighthouse/#validation</link>
+
+## Start sandbox
+<pre>
+  ./run.sh up;
+  ./run.sh ssh
+</pre>
 
 ## Install Lighthouse Integration Version:
 
@@ -15,7 +22,7 @@
 
 ## Configure Lighthouse Integration `yaml` File:
 
-`
+<pre>
 init_config:
 
 instances:
@@ -24,7 +31,7 @@ instances:
     name: <VALUE>
     extra_chrome_flags:
       - "--no-sandbox"
-`
+</pre>
 ## Restart Agent Service:
 
 `sudo service datadog-agent restart`
