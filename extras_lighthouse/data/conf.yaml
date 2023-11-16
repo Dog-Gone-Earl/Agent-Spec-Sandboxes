@@ -1,9 +1,0 @@
-init_config:
-
-instances:
-  - min_collection_interval: 100
-    urls:
-      - https://www.datadoghq.com
-    name: datadogtest
-    extra_chrome_flags:
-      - "--no-sandbox"
