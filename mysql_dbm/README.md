@@ -42,10 +42,10 @@
 -  Python metrics will generate every `.5` seconds so data at `10` second collection intervall (Dogstatsd default) will be represetned in Datadog (`~20th` value)
 
 ### 5. To stop Python app:
-<pre>ctrl+c</pre>
+<pre>CTRL+C</pre>
 
 ### Check values in database:
-<pre>sudo mysql -=root -p
+<pre>sudo mysql -uroot -p
 
 select * from weather_database.weather_table;
 
