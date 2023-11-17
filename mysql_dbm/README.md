@@ -21,21 +21,24 @@
 
 ### 2. Configure your `datadog_user`,`datadog_pw`, `mysql_user`, and `mysql_user_pw` parameters in `setup.sh` file:
 
-`datadog_user=<AGENT_USER>`
-
-`datadog_pw=<AGENT_PASSWORD>`
-
-`mysql_user=<MYSQL_USER>`
-
-`mysql_user_pw=<MYSQL_PASSWORD>`
+```
+datadog_user=<AGENT_USER>
+datadog_pw=<AGENT_PASSWORD>
+mysql_user=<MYSQL_USER>
+mysql_user_pw=<MYSQL_PASSWORD>
+```
 
 ### 3. Run commands
-<pre>./run.sh up
-./run.sh ssh </pre>
+```
+./run.sh up;
+./run.sh ssh 
+```
 
 ### 4. Once sandbox is deployed, run command:
 
-<pre>python3 weather.py</pre>
+```
+python3 weather.py
+```
 
 ### Terminal output will be data being sent to Mysql database
 -  `(temperature, humidity, pressure)`
@@ -45,8 +48,7 @@
 <pre>CTRL+C</pre>
 
 ### Check values in database:
-<pre>sudo mysql -uroot -p
-
+```
+sudo mysql -uroot -p
 select * from weather_database.weather_table;
-
-</pre>
+```
