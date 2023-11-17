@@ -3,26 +3,32 @@
 - <link>https://docs.datadoghq.com/agent/guide/integration-management/?tab=linux#install</link>
 - <link>https://docs.datadoghq.com/integrations/lighthouse/</link>
 
-## Start sandbox
-<pre>
+## 1. Start sandbox
+```
   ./run.sh up;
   ./run.sh ssh
-</pre>
+```
 
-## Install Lighthouse Integration Version:
+## 2. Install Lighthouse Integration Version:
 
-`sudo datadog-agent integration install -t -r datadog-lighthouse==<LIGHTHOUSE_VERSION>`
+```
+sudo datadog-agent integration install -t -r datadog-lighthouse==<LIGHTHOUSE_VERSION>
+```
 
-## Restart Agent Service:
+## 3. Restart Agent Service:
 
-`sudo service datadog-agent restart`
+```
+sudo service datadog-agent restart
+```
 
-## Copy Default Lighthouse `conf.yaml`` file:
-`sudo cp -r /etc/datadog-agent/conf.d/lighthouse.d/conf.yaml.example /etc/datadog-agent/conf.d/lighthouse.d/conf.yaml`
+## 4. Copy Default Lighthouse `conf.yaml`` file:
+```
+sudo cp -r /etc/datadog-agent/conf.d/lighthouse.d/conf.yaml.example /etc/datadog-agent/conf.d/lighthouse.d/conf.yaml
+```
 
-## Configure Lighthouse Integration `yaml` File:
+## 5. Configure Lighthouse Integration `yaml` File:
 
-<pre>
+```
 init_config:
 
 instances:
@@ -31,9 +37,11 @@ instances:
     name: <VALUE>
     extra_chrome_flags:
       - "--no-sandbox"
-</pre>
-## Restart Agent Service:
+```
+## 6. Restart Agent Service:
 
-`sudo service datadog-agent restart`
+```
+sudo service datadog-agent restart
+```
 
 ## Lighthouse Metrics Should Begin to Collect
