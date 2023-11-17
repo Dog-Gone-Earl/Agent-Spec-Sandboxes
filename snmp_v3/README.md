@@ -10,7 +10,7 @@ security-level string=authPriv
 user=$snmpv3_user
 ```
 
-## Configure in `setup.sh` File the Values:
+## Configure in `setup.sh` File the Values (avoid special characters):
 ```
 auth_key_string=<VAlUE>
 priv_key_string=<VAlUE>
