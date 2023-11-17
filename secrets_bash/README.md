@@ -1,6 +1,12 @@
 # Secrets Management for `datadog.yaml` file
 - ### Will Test Configuring `API KEY` and `site` Parameters
 
+## Spin up Sandbox:
+```
+./run.sh up;
+./run.sh ssh
+```
+
 ## Create file:
 ```
 cd /etc/datadog-agent/;
