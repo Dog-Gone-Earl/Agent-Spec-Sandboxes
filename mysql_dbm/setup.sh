@@ -4,10 +4,10 @@
 database=weather_database
 table=weather_table
 user=root
-datadog_user=dd_msyql
-datadog_pw=dd_2023@
-mysql_user=db_user
-mysql_user_pw=forecaster2023
+datadog_user=<AGENT_USER>
+datadog_pw=<AGENT_PASSWORD>
+mysql_user=<MYSQL_USER>
+mysql_user_pw=<MYSQL_PASSWORD>
 
 # in order to cooperate with the AWS Sandbox environment, let's make sure to
 # always rely on the ~/ directory for unix systems
