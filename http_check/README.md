@@ -4,7 +4,7 @@
 
 ## Run Command:
 
-#### \*\*NOTE: Default certificate expiration is set to 500 days. To change edit in `cert_script.sh` script\*\*: 
+#### \*\*NOTE: Default certificate expiration is set to `500` days. To change edit in `cert_script.sh` script\*\*: 
 
 
 ```
