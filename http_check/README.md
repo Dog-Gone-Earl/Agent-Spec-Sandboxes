@@ -13,7 +13,6 @@
 
 ```
 cd /etc; sudo mkdir http_sanbox; cd http_sanbox;
-curl -o ssl-tls.md https://gist.githubusercontent.com/fanny-jiang/082d125428828205cb1092b96de91e64/raw/3df61cb880df51188b59d42d9beaaecb4298d4c2/ssl-tls.md;
 bash ~/data/cert_script.sh ;sudo chmod 777 rootCA.key ubuntu.crt ubuntu.key
 ```
 
@@ -40,17 +39,14 @@ curl --cacert <ROOT_CA_CERT> https://<HOSTNAME>:8080
 
 # Configuring the Agent HTTP_Check Integration:
 
-### Create and Edit the `conf.d/http_check/conf.yaml` file
-```
-sudo cp -r /etc/datadog-agent/conf.d/http_check.d/conf.yaml.example /etc/datadog-agent/conf.d/http_check.d/conf.yaml
-```
+### Edit the `conf.d/http_check/conf.yaml` file
 
 ```
 init_config:
 
 instances:
   - name: <VALUE>
-    url: https://ubuntu:8080/ssl-tls.md
+    url: https://ubuntu:8080/hello_cert.html
     check_certificate_expiration: true
     tls_cert: /etc/sandbox_certs/ubuntu.crt
     tls_private_key: /etc/sandbox_certs/ubuntu.key

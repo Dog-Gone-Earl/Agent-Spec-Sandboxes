@@ -1,4 +1,5 @@
 #!/bin/bash
+date=$date
 
 # in order to cooperate with the AWS Sandbox environment, let's make sure to
 # always rely on the ~/ directory for unix systems
@@ -25,3 +26,11 @@ sudo npm install --global http-server
 
 echo "Installing dd-agent from api_key: ${DD_API_KEY}..."
 DD_API_KEY=${DD_API_KEY} DD_SITE="datadoghq.com" bash -c "$(curl -L https://s3.amazonaws.com/dd-agent/scripts/install_script_agent7.sh)"
+sudo /etc/init.d/datadog-agent stop
+
+sudo cp -r /etc/datadog-agent/conf.d/http_check.d/conf.yaml.example /etc/datadog-agent/conf.d/http_check.d/conf.yaml
+sudo sed -i.yaml "s/# hostname: <HOSTNAME_NAME>/hostname: http_check_sandbox/1" /etc/datadog-agent/datadog.yaml
+sudo sed -i.yaml "s/# env: <environment name>/env: ubuntu_land/1" /etc/datadog-agent/datadog.yaml
+sudo /etc/init.d/datadog-agent start
+echo "Sandbox Configured at $(date)!"
+echo "Lets Work on the HTTP Configuration"
