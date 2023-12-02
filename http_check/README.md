@@ -63,6 +63,4 @@ sudo service datadog-agent restart
 ```
 
 ## HTTP_Check Metrics Should Begin to Populate. 
-### - You can `import` custom http_check dashboard `http_c.json` to see all metrics to include ssl expiration data:
-
-
+### - You can `import` custom http_check dashboard `http_c.json` to see all metrics to include ssl expiration data
