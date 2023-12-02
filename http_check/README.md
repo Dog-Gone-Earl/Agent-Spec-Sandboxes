@@ -53,6 +53,9 @@ instances:
     tls_ca_cert: /etc/sandbox_certs/rootCA.crt    
 ```
 
+![image](https://github.com/Dog-Gone-Earl/Agent-Spec-Sandboxes/assets/107069502/d28b0b7e-e3de-4501-87a2-9f5b7b56a586)
+![image](https://github.com/Dog-Gone-Earl/Agent-Spec-Sandboxes/assets/107069502/ade9d710-3343-42bc-9ce0-49ebc9bf87fe)
+
 ## Restart Agent:
 
 ```
