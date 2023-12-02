@@ -32,7 +32,7 @@ http-server -S -C <CLIENT_CERTIFICATE> -K <CLIENT_PRIVATE_KEY> -a '<HOSTNAME>' .
 ```
 
 ### Can test with a `curl` command from `bash` script output in the other terminal:
-#### - Look for `200` response
+- Look for `200` response
 ```
 curl --cacert <ROOT_CA_CERT> https://<HOSTNAME>:8080
 ```
