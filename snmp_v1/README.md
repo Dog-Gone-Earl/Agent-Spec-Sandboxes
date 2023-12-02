@@ -13,6 +13,6 @@ comm_string=<VALUE>
 
 ## You Should be able to Run agent/snmpwalk Comnands and collect Basic snmp Metrics of Host:
 ```
-snmpwalk -v 1 -c public -ObentU localhost:161 1.3
-sudo datadog-agent snmp walk localhost:161 1.3 -C public
+snmpwalk -v 1 -c <COMMUNITY_STRING> -ObentU localhost:161 1.3
+sudo datadog-agent snmp walk localhost:161 1.3 -C <COMMUNITY_STRING>
 ```
