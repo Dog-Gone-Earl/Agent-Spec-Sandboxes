@@ -1,6 +1,6 @@
 # SNMMPV1
 
-## Set You `community string` Value in the `setup.sh` File:
+## Set Your `community string` Value in the `setup.sh` File:
 ```
 comm_string=<VALUE>
 ```
