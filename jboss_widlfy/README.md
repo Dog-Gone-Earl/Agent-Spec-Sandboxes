@@ -56,6 +56,11 @@ version
 ```
 sudo systemctl status wildfly
 ```
+### *Can check if jboss instance running with `curl` command*:
+
+```
+curl localhost:8080
+```
 ### 6. Check Agent status
 ```
 sudo datadog-agent status
