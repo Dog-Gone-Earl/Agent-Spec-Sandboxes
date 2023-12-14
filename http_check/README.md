@@ -22,7 +22,7 @@ bash ~/data/cert_script.sh ;sudo chmod 777 rootCA.key ubuntu.crt ubuntu.key
 ### Go to `/etc/sandbox_certs` directory: 
 
 ```
-cd /etc/sandbox_certs
+cd /etc/http_sanbox/
 ```
 
 ### Run `http-server` command from `bash` script output in one terminal to start server:
