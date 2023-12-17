@@ -1,4 +1,4 @@
-# SNMMPV1
+# SNMPV1
 
 ## Set Your `community string` Value in the `setup.sh` File:
 ```
