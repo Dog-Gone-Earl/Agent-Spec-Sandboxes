@@ -91,3 +91,6 @@ max:snmp.<NAME>_ifHighSpeed{*} by {snmp_profile}
 ```
 
 ## Value should match `value` from `snmpwalk` output value `10000`
+
+## Next Steps:
+Try building your own profile with the [snmp_v3](https://github.com/Dog-Gone-Earl/Agent-Spec-Sandboxes/tree/main/snmp_v3) sandbox!
