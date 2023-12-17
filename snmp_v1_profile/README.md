@@ -17,7 +17,7 @@ comm_string=<VALUE>
 sudo touch /etc/datadog-agent/conf.d/snmp.d/profiles/ubuntu.yaml
 ```
 
-## Input in `.yaml` file:
+## Input in `ubuntu.yaml` file:
 
 ```
 sysobjectid: 1.3.6.1.4.1.8072.3.2.10
@@ -29,28 +29,28 @@ metrics:
 ## - Can also wildcard the `sysobjectid`:
 
 ```
-
 Example
 1.3.*
 ```
-### Run the `snmpwalk` command to see `sysobjectid`
+### Will be targeting ubuntu snmp `OID` that exposes the `sysobjectid`:
 
 ```
-
 .1.3.6.1.4.1.8072.3.2.10
 .1.3.6.1.2.1.1.2.0 = OID: .1.3.6.1.4.1.8072.3.2.10
 ```
+
+### Agent polls this OID from `_base.yml` profile:
+- <link>https://github.com/DataDog/integrations-core/blob/master/snmp/datadog_checks/snmp/data/default_profiles/_base.yaml#L19C1-L22C28</link>
 ### - Test with `snmpwalk`:
 
 ```
-
 snmpwalk -v 1 -c <COMMUNITY_STRING> -ObentU localhost:161 .1.3.6.1.2.1.1.2.0
 ```
 
-## We will target the OID `ifHighSpeed`
+## We will target the OID `ifHighSpeed`:
 ### - Test with `snmpwalk`:
-- An estimate of the interface's current bandwidth in units of 1,000,000 bits per second
-<link>https://oidref.com/1.3.6.1.2.1.31.1.1.1.15</link>
+- Defined as "An estimate of the interface's current bandwidth in units of 1,000,000 bits per second"
+- <link>https://oidref.com/1.3.6.1.2.1.31.1.1.1.15</link>
 
 ```
 snmpwalk -v 1 -c <COMMUNITY_STRING> -ObentU localhost:161 .1.3.6.1.2.1.31.1.1.1.15.2
@@ -82,7 +82,6 @@ sudo chown dd-agent /etc/datadog-agent/conf.d/snmp.d/profiles/ubuntu.yaml
 ### Start Agent:
 
 ```
-
 sudo service datadog-agent start
 ```
 ## You Should be able to query configured snmp metric `<NAME>_ifHighSpeed`:
