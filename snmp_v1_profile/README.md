@@ -1,4 +1,4 @@
-# SNMMP V1 Profile
+# SNMP V1 Profile
 
 ## Set Your `community string` value in the `setup.sh` File:
 ```
