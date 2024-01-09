@@ -27,12 +27,6 @@ pip3 install datadog
 sudo sed -i "s/# use_dogstatsd: true/use_dogstatsd: true/1" /etc/datadog-agent/datadog.yaml
 ```
 
-### 5. Run `curl` command to grab .sh script:
-
-```
-curl -o weather.py https://raw.githubusercontent.com/Dog-Gone-Earl/Agent-Spec-Sandboxes/main/dogstatsd-weather-sim-app/weather_code.py
-```
-
 ### 4. Restart the Agent
 ```
 sudo systemctl restart datadog-agent
