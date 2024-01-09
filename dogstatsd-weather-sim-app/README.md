@@ -2,7 +2,7 @@
 
 ## Dogstatsd Excercise
 
-### 1. Spin Up Ubuntu Sandbox
+### 1. Spin Up a Ubuntu Sandbox
 
 ```
 vagrant up
@@ -27,22 +27,22 @@ pip3 install datadog
 sudo sed -i "s/# use_dogstatsd: true/use_dogstatsd: true/1" /etc/datadog-agent/datadog.yaml
 ```
 
-### 4. Restart the Agent
+### 5. Restart the Agent
 ```
 sudo systemctl restart datadog-agent
 sudo datadog-agent status | grep "use_dogstatsd:"
 ```
-### 5. Run Python program in the background:
+### 6. Run Python program in the background:
 
 ```
 python3 weather.py &
 ```
 
-### 6. Go to your Datadg account. You should be able to search a list of 'weather.py' application metrics from code:
+### 7. Go to your Datadg account. You should be able to search a list of 'weather.py' application metrics from code:
 
 ![image](https://user-images.githubusercontent.com/107069502/212426051-f315685b-5032-460c-befc-e80f8b78d755.png)
 
-### 7. Close Weather App and Agent</h1>
+### 8. Close Weather App and Agent</h1>
 
 ```
  #PID number will display when starting Weather App
