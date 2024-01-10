@@ -11,8 +11,10 @@ comm_string=<VALUE>
 .run.sh ssh;
 ```
 
-## You Should be able to Run agent/snmpwalk Comnands and collect Basic snmp Metrics of Host:
+## You Should be able to Run `agent snmpwalk` and host `snmpwalk` Comnands and collect Basic snmp Metrics of Host:
 ```
 snmpwalk -v 1 -c <COMMUNITY_STRING> -ObentU localhost:161 1.3
 sudo datadog-agent snmp walk localhost:161 1.3 -C <COMMUNITY_STRING>
 ```
+
+## SNMP Metrics Should begin Populating Network Devices UI
