@@ -1,20 +1,28 @@
-# SNMPV1
+# sandbox/vagrant/agent7/snmp_v1
 
-## Set Your `community string` Value in the `setup.sh` File:
+## What this VM does
+
+- Test snmp (v1) functionaity with Agent
+
+## VM type: Linux Ubuntu
+
+## Special Instructions
+
+### 1. Set Your `community string` Value in the `setup.sh` File:
 ```
 comm_string=<VALUE>
 ```
 
-## Start the Sandbox
+### 2. Start the Sandbox
 ```
 ./run.sh up;
 .run.sh ssh;
 ```
 
-## You Should be able to Run `agent snmpwalk` and host `snmpwalk` Comnands and collect Basic snmp Metrics of Host:
+### 3. You Should be able to Run `agent snmpwalk` and host `snmpwalk` Comnands and collect Basic snmp Metrics of Host:
 ```
 snmpwalk -v 1 -c <COMMUNITY_STRING> -ObentU localhost:161 1.3
 sudo datadog-agent snmp walk localhost:161 1.3 -C <COMMUNITY_STRING>
 ```
 
-## SNMP Metrics Should begin Populating Network Devices UI
+## SNMP Metrics Should begin Populating in Network Devices UI
