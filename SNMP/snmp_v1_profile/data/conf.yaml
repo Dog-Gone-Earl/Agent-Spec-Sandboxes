@@ -1,0 +1,11 @@
+init_config:
+
+    use_device_id_as_hostname: true
+    loader: core
+
+instances:
+  -
+    ip_address: localhost
+    snmp_version: 3
+    loader: core
+    use_device_id_as_hostname: true
