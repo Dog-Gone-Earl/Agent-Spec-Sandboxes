@@ -19,7 +19,7 @@ bash ~/data/cert_script.sh ;sudo chmod 777 rootCA.key ubuntu.crt ubuntu.key
 #### \*\*Take Note of `http` and `curl` Commands Outputted that will be Needed to Run Test\*\*:
 
 ### Open a second terminal: (cmd+T)
-### Go to `/etc/sandbox_certs` directory: 
+### Go to `/etc/http_sanbox` directory: 
 
 ```
 cd /etc/http_sanbox/
