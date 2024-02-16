@@ -48,9 +48,9 @@ instances:
   - name: <VALUE>
     url: https://ubuntu:8080/hello_cert.html
     check_certificate_expiration: true
-    tls_cert: /etc/sandbox_certs/ubuntu.crt
-    tls_private_key: /etc/sandbox_certs/ubuntu.key
-    tls_ca_cert: /etc/sandbox_certs/rootCA.crt    
+    tls_cert: /etc/http_sanbox/ubuntu.crt
+    tls_private_key: /etc/http_sanbox/ubuntu.key
+    tls_ca_cert: /etc/http_sanbox/rootCA.crt    
 ```
 
 ![image](https://github.com/Dog-Gone-Earl/Agent-Spec-Sandboxes/assets/107069502/d28b0b7e-e3de-4501-87a2-9f5b7b56a586)
