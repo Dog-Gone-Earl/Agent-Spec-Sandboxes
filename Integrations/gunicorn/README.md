@@ -13,7 +13,11 @@ gunicorn --workers=2 app:app --statsd-host localhost:8125 -n app
 
 ## 3. Open new terminal `(CMD+T)`
 - ### 3a. `ssh` into sandbox (`./run.sh ssh`)
-- ### 3b. Configure `gunicorn.d/yaml` file: 
+- ### 3b. Copy and Configure `gunicorn.d/conf.yaml` file: 
+
+```
+sudo cp -r /etc/datadog-agent/conf.d/gunicorn.d/conf.yaml.example /etc/datadog-agent/conf.d/gunicorn.d/conf.yaml
+```
 
 ```
 init_config:
