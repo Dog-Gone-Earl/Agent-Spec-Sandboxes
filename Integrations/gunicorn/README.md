@@ -35,5 +35,5 @@ instances:
 sudo service datadog-agent restart
 ```
  
-## Openmetrics KB Reference of Implemenation:
+## Agent should show connection to Gunicorn Enviornment
 
