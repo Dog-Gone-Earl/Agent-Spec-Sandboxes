@@ -33,6 +33,10 @@ instances:
 
 ```
 
+```
+sudo sed -i "s/<PROC_NAME>/app/1" /etc/datadog-agent/conf.d/gunicorn.d/conf.yaml
+```
+
 ## Restart Agent
 
 ```
