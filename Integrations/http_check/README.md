@@ -12,8 +12,9 @@
 ```
 
 ```
-cd /etc; sudo mkdir http_sanbox; cd http_sanbox;
-bash ~/data/cert_script.sh ;sudo chmod 777 rootCA.key ubuntu.crt ubuntu.key
+cd /etc; sudo mkdir http_sanbox; cd http_sanbox
+sudo bash ~/data/cert_script.sh
+sudo chmod 777 rootCA.key ubuntu.crt ubuntu.key
 ```
 
 #### \*\*Take Note of `http` and `curl` Commands Outputted that will be Needed to Run Test\*\*:
