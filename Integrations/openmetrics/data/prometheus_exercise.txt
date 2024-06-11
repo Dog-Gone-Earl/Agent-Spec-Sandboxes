@@ -977,3 +977,9 @@ member_dna_redis_get_duration_bucket{le="10.0"} 50.0
 member_dna_redis_get_duration_bucket{le="+Inf"} 50.0
 member_dna_redis_get_duration_count 50.0
 member_dna_redis_get_duration_sum 0.06938419723883271
+# HELP terry_requests_total 
+# TYPE terry_requests_total counter
+terry_requests_total{name="hello",tag_exta="b"} 5
+terry_requests_total{name="world",tag_exta="b"} 10
+terry_requests_total{name="world",tag_exta="b"} 15
+terry_requests_total{name="hello",tag_exta="b"} 20
