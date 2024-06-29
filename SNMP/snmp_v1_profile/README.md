@@ -54,7 +54,15 @@ snmpwalk -v 1 -c <COMMUNITY_STRING> -ObentU localhost:161 .1.3.6.1.2.1.1.2.0
 
 - Defined as "An estimate of the interface's current bandwidth in units of 1,000,000 bits per second"
 - <link>https://oidref.com/1.3.6.1.2.1.31.1.1.1.15</link>
-
+- Agent collects this `OID` by default in the `_generic-if.yaml` profile:
+  - <link>https://github.com/DataDog/integrations-core/blob/40193a9e2b1b854a8f3b95dd0e7041259f22653d/snmp/datadog_checks/snmp/data/default_profiles/_generic-if.yaml#L153-L154</link>
+```
+(...)
+  symbols:
+  - OID: 1.3.6.1.2.1.31.1.1.1.15
+    name: ifHighSpeed
+(...)
+```
 #### Test with `snmpwalk`:
 ```
 snmpwalk -v 1 -c <COMMUNITY_STRING> -ObentU localhost:161 .1.3.6.1.2.1.31.1.1.1.15.2
