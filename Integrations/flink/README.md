@@ -6,7 +6,7 @@
 ./run.sh ssh
 ```
 
-## 2. Configure Datadog instructions for flink
+## 2. Follow Datadog instructions for flink configuration
 
 <link>https://docs.datadoghq.com/integrations/flink/#setup</link>
 
