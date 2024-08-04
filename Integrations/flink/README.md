@@ -1,4 +1,4 @@
-# Openmetrics (Host)
+# Flink Integration
 
 ## 1. Spin Up Sandbox:
 ```
