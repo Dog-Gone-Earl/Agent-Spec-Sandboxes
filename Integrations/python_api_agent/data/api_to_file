@@ -1,0 +1,14 @@
+"""
+Send logs returns "Request accepted for processing (always 202 empty JSON)." response
+"""
+
+import requests
+
+r = requests.get('https://reqres.in/api/users/2')
+print(r.text)
+
+log_data = open("/home/vagrant/data.log", "a")
+log_data.write("\n"+str(r.text))
+
+#json_data = r.json()
+#print(json_data['data']['first_name'])
