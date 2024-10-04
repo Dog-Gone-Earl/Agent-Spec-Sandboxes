@@ -2,11 +2,12 @@ Vagrant.configure("2") do |config|
   # The most common configuration options are documented and commented below.
   # For a complete reference, please see the online documentation at
   # https://docs.vagrantup.com.
+  random_number = rand(1..9999)
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
   config.vm.box = "hajowieland/ubuntu-jammy-arm"
-  config.vm.hostname = "otel-ubuntu"
+  config.vm.hostname = "otel-ubuntu-#{random_number}"
   config.vm.provider "vmware_desktop" do |v|
     v.ssh_info_public = true
     v.gui = true

@@ -1,5 +1,5 @@
 
-Command being ran automatically
+Command being ran automatically with `Otel` installation
 ```
 otelcol-contrib --config /etc/otelcol-contrib/collector.yaml
 ```
@@ -11,5 +11,5 @@ curl http://0.0.0.0:8888/metrics
 
 Helpful commands
 ```
-sudo journalctl -u otelcol-contrib
+sudo journalctl -u otelcol-contrib -f
 ```
