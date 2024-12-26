@@ -41,5 +41,25 @@ instances:
 sudo service datadog-agent restart
 ```
  
-## Agent should show connection to Gunicorn Enviornment
+## Agent should show connection to Gunicorn Enviornment and generating metric `gunicorn.workers`
+
+```
+    gunicorn (4.0.0)
+    ----------------
+      Instance ID: gunicorn:f0ad747feb3240d6 [WARNING]
+      Configuration Source: file:/etc/datadog-agent/conf.d/gunicorn.d/conf.yaml
+      Total Runs: 43
+      Metric Samples: Last Run: 2, Total: 22
+      Events: Last Run: 0, Total: 0
+      Service Checks: Last Run: 1, Total: 43
+      Average Execution Time : 88ms
+      Last Execution Date : 2024-12-26 21:31:08 CET / 2024-12-26 20:31:08 UTC (1735245068000)
+      Last Successful Execution Date : 2024-12-26 21:31:08 CET / 2024-12-26 20:31:08 UTC (1735245068000)
+      metadata:
+        version.major: 23
+        version.minor: 0
+        version.patch: 0
+        version.raw: 23.0.0
+        version.scheme: semver
+```
 
