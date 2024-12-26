@@ -8,8 +8,9 @@
 ## 2. Run command: 
 
 ```
-gunicorn --workers=2 app:app --statsd-host localhost:8125 -n app
+gunicorn --workers=2 app:app --statsd-host localhost:8125 -n <APP_NAME>
 ```
+- Replace `<APP_NAME>` with desired name
 
 ## 3. Open new terminal `(CMD+T)`
 - ### 3a. `ssh` into sandbox (`./run.sh ssh`)
@@ -29,13 +30,10 @@ instances:
     ## gunicorn --name <WEB_APP_NAME> <WEB_APP_CONFIG>.ini
     ##
     ## the name is `<WEB_APP_NAME>`
-  - proc_name: app
+  - proc_name: <APP_NAME>
 
 ```
-
-```
-sudo sed -i "s/<PROC_NAME>/app/1" /etc/datadog-agent/conf.d/gunicorn.d/conf.yaml
-```
+- Replace `<APP_NAME>` with set app name
 
 ## Restart Agent
 
